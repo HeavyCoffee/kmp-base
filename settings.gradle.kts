@@ -62,7 +62,9 @@ internal fun Settings.includeProjects(
         }
         .forEach { dir ->
             include(
-                getProjectPath(dir)
+                getProjectPath(dir).also {
+                    println(it)
+                }
             )
         }
 }

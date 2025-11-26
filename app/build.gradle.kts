@@ -10,14 +10,14 @@ kotlin {
             implementation(libs.androidx.activity.compose)
         }
         commonMain.dependencies {
-            implementation(libs.common.compose.runtime)
-            implementation(libs.common.compose.foundation)
-            implementation(libs.common.compose.material3)
-            implementation(libs.common.compose.ui)
-            implementation(libs.common.compose.resources)
-            implementation(libs.common.compose.preview)
-            implementation(libs.common.androidx.lifecycle.viewmodelCompose)
-            implementation(libs.common.androidx.lifecycle.runtimeCompose)
+            implementation(libs.compose.runtime)
+            implementation(libs.compose.foundation)
+            implementation(libs.compose.material3)
+            implementation(libs.compose.ui)
+            implementation(libs.compose.resources)
+            implementation(libs.compose.preview)
+            implementation(libs.androidx.lifecycle.viewmodelCompose)
+            implementation(libs.androidx.lifecycle.runtimeCompose)
         }
         commonTest.dependencies {
             implementation(libs.kotlin.test)
@@ -26,5 +26,5 @@ kotlin {
 }
 
 dependencies {
-    debugImplementation(libs.common.compose.uiTooling)
+    debugImplementation(libs.compose.uiTooling)
 }
