@@ -2,7 +2,7 @@ import org.gradle.api.JavaVersion
 import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 
 internal object AndroidConfig {
-    const val NAME_SPACE: String = "com.heavycoffee.kmpbase"
+    const val BASE_NAME_SPACE: String = "com.heavycoffe.kmpbase"
     const val APP_ID: String = "com.heavycoffee.kmpbase"
     const val VERSION_NAME: String = "0.0.1"
     val JAVA_TARGET: JvmTarget = JvmTarget.JVM_17

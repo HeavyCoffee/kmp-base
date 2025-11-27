@@ -7,11 +7,14 @@ import org.gradle.api.Project
 
 internal fun Project.configureAndroid(
     extension: CommonExtension<*, *, *, *, *, *>,
-    namespace: String = AndroidConfig.NAME_SPACE,
     androidSdk: AndroidSDK
 ) = extension.apply {
-//    namespace =
-    this.namespace = namespace
+    val projectNameSpace = projectDir
+        .relativeTo(rootDir)
+        .invariantSeparatorsPath
+        .replace(Regex("[/-]")) { if (it.value == "/") "." else "" }
+
+    this.namespace = "${AndroidConfig.BASE_NAME_SPACE}.$projectNameSpace"
     compileSdk = androidSdk.compile
 
     defaultConfig {

@@ -18,9 +18,7 @@ kotlin {
         }
     }
 }
-android {
-    namespace = "com.heavycoffe.core.network"
-}
+
 dependencies {
     debugApi(libs.compose.uiTooling)
 }

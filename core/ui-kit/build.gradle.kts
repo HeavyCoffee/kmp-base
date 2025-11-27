@@ -15,10 +15,6 @@ kotlin {
     }
 }
 
-android {
-    namespace = "com.heavycoffee.core.uikit"
-}
-
 dependencies {
     debugApi(libs.compose.uiTooling)
 }
